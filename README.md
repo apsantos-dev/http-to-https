@@ -43,7 +43,7 @@ Create a new file named `.htaccess` and enter the following data:
 
 To identify if the `.htaccess` file is working, we will use a folder and a file as an example. *( This procedure is optional )*
 
-Create a folder named [ test ]( test/ ) and inside this folder create a file named [ test.html ]( test/test.html ) with the following data:
+Create a folder named [ test ]( test/ ) and inside this folder create a file named [ test.html ]( test/test.html ).
 
 **Send to the lodging**
 
