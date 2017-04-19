@@ -33,8 +33,8 @@ Create a new file named `.htaccess` and enter the following data:
 <pre>
   RewriteEngine On
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteCond %{HTTP_HOST} ^www.meudominio.com.br [NC]
-  RewriteRule ^(.*)$ https://www.meudominio.com.br/$1 [L,R=301]
+  RewriteCond %{HTTP_HOST} ^www.mydomain.com [NC]
+  RewriteRule ^(.*)$ https://www.mydomain.com/$1 [L,R=301]
 </pre>
 
 > If your site already exists this file just add the above code. Do not forget to change `mydomain.com` to the correct one. \o/
@@ -43,20 +43,7 @@ Create a new file named `.htaccess` and enter the following data:
 
 To identify if the `.htaccess` file is working, we will use a folder and a file as an example. *( This procedure is optional )*
 
-Create a folder named `test` and inside this folder create a file named` test.html` with the following data:
-
-<pre>
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>HTTP to HTTPS</title>
-  </head>
-  <body>
-    Redirecting HTTP pages to HTTPS.
-  </body>
-  </html>
-</pre>
+Create a folder named [ test ]( test/ ) and inside this folder create a file named [ test.html ]( test/test.html ) with the following data:
 
 **Send to the lodging**
 
