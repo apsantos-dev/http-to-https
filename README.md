@@ -103,4 +103,4 @@ Contribute to make this **Redirecting HTTP pages to HTTPS** model better. \o/
 
 ## License
 
-This **Redirecting HTTP pages to HTTPS** template is licensed under the MIT License - see the file [ LICENSE ]( LICENSE ) for details.
+This **Redirecting HTTP pages to HTTPS** is licensed under the MIT License - see the file [ LICENSE ]( LICENSE ) for details.
