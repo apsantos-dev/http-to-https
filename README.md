@@ -32,9 +32,8 @@ Create a new file named `.htaccess` and enter the following data:
 
 <pre>
   RewriteEngine On
-  RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteCond %{HTTP_HOST} ^www.mydomain.com [NC]
-  RewriteRule ^(.*)$ https://www.mydomain.com/$1 [L,R=301]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1 [L,R]
 </pre>
 
 > If your site already exists this file just add the above code. Do not forget to change `mydomain.com` to the correct one. \o/
