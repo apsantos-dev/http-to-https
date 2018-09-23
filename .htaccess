@@ -1,4 +1,3 @@
 RewriteEngine On
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteCond %{HTTP_HOST} ^www.mydomain.com [NC]
-RewriteRule ^(.*)$ https://www.mydomain.com/$1 [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1 [L,R]
