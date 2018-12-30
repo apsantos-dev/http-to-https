@@ -31,9 +31,11 @@ Summary
 Create a new file named `.htaccess` and enter the following data:
 
 <pre>
+  Options -Indexes
+
   RewriteEngine On
   RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1 [L,R]
+  RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
 </pre>
 
 > If your site already exists this file just add the above code. Do not forget to change `mydomain.com` to the correct one. \o/
