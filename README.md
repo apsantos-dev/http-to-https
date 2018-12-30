@@ -78,14 +78,6 @@ I am currently using this type of redirection in the hosting in which my site, a
 
 > It is always good to remember that this procedure should be performed with the guidance of your hosting!
 
-## Credits
-
-I leave here the credits for [ Hostnet ]( https://www.hostnet.com.br/ ) about the file [ .htaccess ]( .htaccess ).
-
-## Author
-
-**[ APSantos-Pires ]( https://github.com/APSantos-Pires )** - *Initial model*
-
 ## Contribution
 
 Contribute to make this **Redirecting HTTP pages to HTTPS** model better. \o/
@@ -97,10 +89,6 @@ Contribute to make this **Redirecting HTTP pages to HTTPS** model better. \o/
 5. Send a request for *pull request*.
 
 = ]
-
-## Version
-
-> Release: 1.0.1
 
 ## License
 
