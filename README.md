@@ -10,11 +10,10 @@ Hosting with `SSL` security certificate installed.
 
 ## Files
 
-You can use the files available in this tutorial or create them on your own. 
+You can use the files available in this tutorial or create them on your own:
 
-- The [ .htaccess ]( .htaccess ) file must be created in the root folder of the site, usually named `public`; 
-
-- The folder [ test ]( test/ ) and the file [ test.html ]( test/test.html ) are optional and must also be created in the root folder of the site.
+- The [.htaccess](.htaccess) file must be created in the root folder of the site, usually named `public`;
+- The folder [test](test/) and the file [test.html](test/test.html) are optional and must also be created in the root folder of the site.
 
 ## Development
 
@@ -26,39 +25,40 @@ Summary
 - Folder and test file;
 - Send to the lodging.
 
-**New file**
+### New file
 
 Create a new file named `.htaccess` and enter the following data:
 
-<pre>
-  Options -Indexes
+```sh
+Options -Indexes
 
-  RewriteEngine On
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
-</pre>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^%{SERVER_NAME} [NC]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+```
 
 > If your site already exists this file just add the above code. Do not forget to change `mydomain.com` to the correct one. \o/
 
-**Folder and test file**
+### Folder and test file
 
 To identify if the `.htaccess` file is working, we will use a folder and a file as an example. *( This procedure is optional )*
 
-Create a folder named [ test ]( test/ ) and inside this folder create a file named [ test.html ]( test/test.html ).
+Create a folder named [test](test/) and inside this folder create a file named [test.html](test/test.html).
 
-**Send to the lodging**
+### Send to the lodging
 
 After performing the above procedures, send the folder and files to your hosting. Use your favorite FTP program to do this.
 
 The structure of the folder and the files will look similar to the chart below:
 
-<pre>
+```sh
 ├── test
 │   └── test.html
 ├── .htaccess
-</pre>
+```
 
-> Graphic example inspired by: https://github.com/willianjusten/braziljs-16
+> Graphic example inspired by: [https://github.com/willianjusten/braziljs-16](https://github.com/willianjusten/braziljs-16)
 
 ## Test
 
@@ -68,7 +68,7 @@ After performing all the previous procedures, access the links below:
 
 When loading the 2 pages, check if something similar appears with:
 
-> https://www.yourdomain.com and also https://www.yourdomain.com/test/test.html 
+> [https://www.yourdomain.com](https://www.yourdomain.com) and also [https://www.yourdomain.com/test/test.html](https://www.yourdomain.com/test/test.html)
 
 If the address bar displays a `lock` and the domain starts with `https://` everything has occurred as expected. If this does not happen, I advise you to contact your hosting to see if this is allowed and if it was done correctly.
 
@@ -92,4 +92,4 @@ Contribute to make this **Redirecting HTTP pages to HTTPS** model better. \o/
 
 ## License
 
-This **Redirecting HTTP pages to HTTPS** is licensed under the MIT License - see the file [ LICENSE ]( LICENSE ) for details.
+This **Redirecting HTTP pages to HTTPS** is licensed under the MIT License - see the file [LICENSE](LICENSE) for details.
